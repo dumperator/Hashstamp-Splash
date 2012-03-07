@@ -1,0 +1,8 @@
+express = require \express
+
+htts = express.createServer ()
+htts.configure !->
+  htts.use "/" express.static "pub"
+  htts.use htts.router
+
+htts.listen 80
