@@ -5,4 +5,7 @@ htts.configure !->
   htts.use "/" express.static "pub"
   htts.use htts.router
 
+htts.all "/*" !(req, res)->
+  res.redirect "http://launch.hashstamp.co"
+
 htts.listen 80
