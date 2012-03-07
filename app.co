@@ -2,8 +2,8 @@ express = require \express
 
 htts = express.createServer ()
 htts.configure !->
-  htts.use "/" express.static "pub"
-  htts.use htts.router
+  #htts.use "/" express.static "pub"
+  #htts.use htts.router
 
 htts.all "/*" !(req, res)->
   res.redirect "http://launch.hashstamp.co"
